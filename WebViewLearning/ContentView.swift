@@ -18,12 +18,13 @@ struct WebView: UIViewRepresentable {
         let localHTMLUrl = URL(fileURLWithPath: path, isDirectory: false)
         uiView.loadFileURL(localHTMLUrl, allowingReadAccessTo: localHTMLUrl)
     }
+    
+    // Print something here based on triggered function "NativeApp.loginServiceReady();"
 }
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("hello?")
             WebView()
         }
     }
