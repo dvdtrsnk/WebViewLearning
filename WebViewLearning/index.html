@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, viewport-fit=cover">
+</head>
+<body>
+  <script>
+    // NativeApp.loginServiceReady function
+    window.NativeApp = {
+      loginServiceReady: () => {
+        const log = (msg) => {
+          const p = document.createElement('p');
+          p.textContent = msg;
+          document.body.appendChild(p);
+        };
+
+        log('loginServiceReady Triggered!');
+      }
+    };
+
+    // Delayed execution of NativeApp.loginServiceReady
+    setTimeout(() => {
+      NativeApp.loginServiceReady();
+    }, 5000); // 5 seconds
+  </script>
+</body>
+</html>
